@@ -1,5 +1,9 @@
 # biosensorsortseq
-## R package containing functions for processing and analyzing data from biosensor sort-seq experiments
+R package containing functions for processing and analyzing data from biosensor sort-seq experiments
+
+# Installation  
+devtools::install_github("https://github.com/jnkoberstein/biosensor-sort-seq")  
+library(biosensorsortseq)
 
 # External dependencies
-## cutadadpt (https://cutadapt.readthedocs.io/en/stable/installation.html)
+cutadadpt (https://cutadapt.readthedocs.io/en/stable/installation.html)
