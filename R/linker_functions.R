@@ -211,12 +211,12 @@ countLinkers <- function(fnames, deg_codons, leftseq, rightseq, linklen,
 #' corresponding to linker sequences and entries corresponding to read counts.
 #' @export
 read.Linker.Counts <- function(count.dir) {
-  fnames <- list.files(count.dir, full.names = T)
-  fnames <- tools::file_path_sans_ext(basename(fnames))
+  fullnames <- list.files(count.dir, full.names = T)
+  fnames <- tools::file_path_sans_ext(basename(fullnames))
 
   fnames <- vapply(strsplit(fnames, "_"), `[`, 1, FUN.VALUE=character(1))
 
-  seqs <- Reduce(intersect, lapply(fnames,
+  seqs <- Reduce(intersect, lapply(fullnames,
                                    function(f) {read.table(f, sep = "\t",
                                                            header = F)[-1,1]}))
 
@@ -226,7 +226,7 @@ read.Linker.Counts <- function(count.dir) {
   colnames(cdf) <- fnames
 
   for (fname in fnames){
-    fl <- fnames[grep(fname, fnames)]
+    fl <- fullnames[grep(fname, fnames)]
     ind <- grep(fname, colnames(cdf))
     tmp <- read.table(fl, sep = "\t", header = F, stringsAsFactors = F)
     tmp <- tmp[tmp[,1] %in% seqs,]
