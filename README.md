@@ -7,3 +7,6 @@ library(biosensorsortseq)
 
 # External dependencies
 cutadadpt (https://cutadapt.readthedocs.io/en/stable/installation.html)
+
+# License
+This project is licensed under the terms of the MIT license.
