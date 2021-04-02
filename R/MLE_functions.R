@@ -73,8 +73,10 @@ sortseqMLE <- function(gates, read.counts, sorted.cells, eps = 0) {
   dj <- sorted.cells / colSums(read.counts)
 
   cell.counts <- reads2cells(read.counts, sorted.cells)
-
-  f.params <- lnorm_mle(ri = read.counts, 2, 0.2, gates, dj, eps)
+  
+  init.mu <- (gates[1] + gates[length(gates)]) / 2
+  
+  f.params <- lnorm_mle(ri = read.counts, init.mu, 0.2, gates, dj, eps)
 
   out <- data.frame(cell.counts, totalCells = rowSums(cell.counts), f.params)
 
