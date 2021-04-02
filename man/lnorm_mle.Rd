@@ -10,9 +10,9 @@ lnorm_mle(ri, mu, sig, gates, dj, eps)
 \arguments{
 \item{ri}{read counts for variant i}
 
-\item{mu}{mean of fluorescence distribution}
+\item{mu}{mean of log fluorescence distribution}
 
-\item{sig}{standard deviation of fluorescence distribution}
+\item{sig}{standard deviation of log fluorescence distribution}
 
 \item{dj}{proportionality factor for each bin describing the total number 
 of cells sorted in bin j to the total number of read counts in bin j.}
@@ -20,8 +20,8 @@ of cells sorted in bin j to the total number of read counts in bin j.}
 \item{eps}{error rates for sorting}
 }
 \value{
-Dataframe containing maximum likelihood estimates of mean and 
-standard deviation for each variant i.
+Dataframe containing maximum likelihood estimates of mu and sigma for each
+ variant i.
 }
 \description{
 Maximum-likelihood estimates for binned sort-seq using 

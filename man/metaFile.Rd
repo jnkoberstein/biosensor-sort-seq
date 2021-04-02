@@ -28,7 +28,8 @@ indicated by \code{fname}
 \description{
 This function is used to generate a metadata file for annotating the
 insertion sites in a transposon-mediate domain-insertion library. Each
-insertion site is described by the
+insertion site is described by number of ligand-binding domain nucleotides
+after which domain is inserted and the direction of domain insertion.
 }
 \details{
 metadata columns:

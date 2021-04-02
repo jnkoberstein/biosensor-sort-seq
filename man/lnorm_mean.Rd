@@ -2,7 +2,7 @@
 % Please edit documentation in R/MLE_functions.R
 \name{lnorm_mean}
 \alias{lnorm_mean}
-\title{Convert log-normal parameters μ and σ to the log-normal mean}
+\title{Convert log-normal parameters mu and sigma to the log-normal mean}
 \usage{
 lnorm_mean(x)
 }
@@ -13,6 +13,6 @@ lnorm_mean(x)
 integer idicating log-normal mean
 }
 \description{
-Convert log-normal parameters μ and σ to the log-normal mean
+Convert log-normal parameters mu and sigma to the log-normal mean
 }
 \keyword{internal}

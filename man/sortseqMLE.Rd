@@ -2,8 +2,7 @@
 % Please edit documentation in R/MLE_functions.R
 \name{sortseqMLE}
 \alias{sortseqMLE}
-\title{Maximum likelihood estimation of mean and standard deviation using sort-seq
-read count data}
+\title{Maximum likelihood estimation of mu and sigma using sort-seq read count data}
 \usage{
 sortseqMLE(gates, read.counts, sorted.cells, eps = 0)
 }
@@ -21,11 +20,11 @@ sorted into each gate}
 \value{
 Dataframe with columns indicating the estimated cells for each 
 variant sorted into each bin, the total number of cells sorted, and the MLE 
-mean and s.d. for each variant.
+mu and sigma for each variant.
 }
 \description{
-This function is used to obtain maximum likelihood estimates of mean and 
-standard deviation for each variant in a sort-seq experiment. The read count
+This function is used to obtain maximum likelihood estimates of log-normal 
+paramaters mu and sigma for each variant in a sort-seq experiment. The read count
 data for each variantis used with the parameters describing sorting gates and
 total cells sorted to mininize the log-likelihood function.
 }

@@ -1,4 +1,4 @@
-Package: biosensorsortseq
+Package: BiosensorSortSeq
 Type: Package
 Title: Analysis of biosensor sort-seq data
 Version: 0.1.0
@@ -9,12 +9,9 @@ License: CC0
 Encoding: UTF-8
 LazyData: true
 Imports:
-    pracma,
+    ShortRead,
     Biostrings,
     stringr,
-    ShortRead,
     plyr,
     tools
-Suggests: 
-    testthat
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
