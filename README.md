@@ -1,4 +1,4 @@
-# biosensorsortseq
+# BiosensorSortSeq
 R package containing functions for processing and analyzing data from biosensor sort-seq experiments
 
 # Installation  
